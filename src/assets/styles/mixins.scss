@@ -1,0 +1,19 @@
+//flexbox
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//grid
+@mixin self-align-center {
+    margin: 0 auto;   
+}
+
+@mixin full-screen-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,6 @@
+@import '../../assets/styles/mixins.scss';
+
+.app-header{
+    @include flex-center;
+    padding: 5px;
+}
