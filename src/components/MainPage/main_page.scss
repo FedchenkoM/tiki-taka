@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
+.app-wrapper {
+    @include full-screen-block;
+    overflow-y: scroll;
+    background-color: $base-color;
+}
+.container {
+    padding: 8px;
+    max-width: $container-width;
+    @include self-align-center;
+}
+

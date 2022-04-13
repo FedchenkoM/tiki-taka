@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MainPage from './components/MainPage/MainPage';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello World!</h1>
+    <MainPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
