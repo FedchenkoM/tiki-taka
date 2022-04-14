@@ -1,16 +1,16 @@
 import React from 'react';
+import Burger from '../Burger/Burger';
+import NavList from '../NavList/NavList';
 import './navigation.scss';
 
 const Navigation = () => {
     return (
-        <nav>
-            <ul className="navigation">
-                <li><a href='#'>Чемпионаты</a></li>
-                <li><a href='#'>Игроки</a></li>
-                <li><a href='#'>Видео</a></li>
-                <li><a href='#'>Любимая команда</a></li>
-            </ul>
-        </nav>
+        <div>
+            <Burger />
+            <nav className="navigation">
+                <NavList />
+            </nav>
+        </div>
     );
 };
 

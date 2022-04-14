@@ -1,6 +1,14 @@
 @import '../../assets/styles/mixins.scss';
 
-.app-header{
+.app-header {
     @include flex-center;
-    padding: 5px;
+    padding-top: 10px;
+    position: relative;
+    justify-content: flex-end;
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }

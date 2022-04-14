@@ -1,0 +1,92 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.burger-container {
+    position: absolute;
+    right: 0;
+
+    .burger-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        z-index: 5;
+        transition: all 0.2s;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.4;
+        }
+
+        span {
+            width: 40px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            transition: all 0.1s;
+
+            &:nth-of-type(2) {
+                top: calc(50% - 6px);
+            }
+
+            &:nth-of-type(3) {
+                top: calc(50% + 6px);
+
+            }
+        }
+    }
+
+    .burger-menu {
+        transform: translateX(500px);
+
+        visibility: hidden;
+    }
+
+    &.isOpen {
+
+        span:nth-of-type(2),
+        span:nth-of-type(3) {
+            display: none;
+        }
+
+        span {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+        }
+
+        .burger-btn {
+            transition: all 0.2s;
+            border: 2px solid white;
+            border-radius: 50%;
+
+        }
+
+        .burger-menu {
+            transform: translateX(0);
+            transition: all 0.2s;
+            visibility: visible;
+            border: none;
+        }
+
+        ul {
+            padding: 5px;
+        }
+
+        li {
+            padding: 6px;
+
+            &:hover {
+                background-color: $hover-background-color;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    @media only screen and (min-width:$tablet) {
+        display: none;
+    }
+}
