@@ -1,9 +1,10 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
 
 .burger-container {
     position: absolute;
-    right: 0;
+    right: 10px;
+    top:20px;
 
     .burger-btn {
         position: absolute;
@@ -41,7 +42,7 @@
 
     .burger-menu {
         transform: translateX(500px);
-
+        margin-right: 42px;
         visibility: hidden;
     }
 
@@ -77,13 +78,8 @@
             visibility: visible;
             border: none;
         }
-
-        ul {
-            padding: 5px;
-        }
-
         li {
-            padding: 6px;
+            padding: 0 10px 8px 0;
 
             &:hover {
                 background-color: $hover-background-color;
