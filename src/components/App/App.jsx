@@ -1,17 +1,19 @@
 import React from 'react';
-import './main_page.scss';
+import './app.scss';
 import '../../assets/styles/reset.scss';
 import '../../assets/styles/common.scss'
 import Header from '../Header/Header';
+import RouteComponent from '../Routes/RouteComponent';
 
-const MainPage = () => {
+const App = () => {
     return (
         <div className="app-wrapper">
             <div className="container">
-             <Header />
+                <Header />
+                <RouteComponent />
             </div>
         </div>
     );
 };
 
-export default MainPage;        
+export default App;        

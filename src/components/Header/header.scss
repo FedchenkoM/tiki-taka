@@ -2,12 +2,9 @@
 
 .app-header {
     @include flex-center;
-    padding-top: 10px;
-    position: relative;
-    justify-content: flex-end;
+    margin-bottom: 10px;
 
     .logo {
-        position: absolute;
         top: 0;
         left: 0;
     }
