@@ -5,7 +5,7 @@ import MainPage from '../MainPage/MainPage';
 const RouteComponent = () => {
     return (
         <Routes>
-            <Route path='/mainPage' element={<MainPage />} />
+            <Route path='/mainPage' element={<MainPage/>} />
             <Route path='/players' element={<h1>Players</h1>} />
             <Route path="*" element={<Navigate to='/mainPage' />} />
         </Routes>
