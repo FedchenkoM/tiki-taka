@@ -1,11 +1,12 @@
 @import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
 
 .app-header {
     @include flex-center;
-    margin-bottom: 10px;
-
-    .logo {
-        top: 0;
-        left: 0;
-    }
+    position: sticky;
+    top: 0;
+    padding: 6px 0 1px 0;
+    margin-bottom: 3px;
+    background-color: $base-color;
+    border-bottom: 1px solid $base-color2;
 }

@@ -1,9 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
+API list 1)(https://github.com/azharimm/football-standings-api)
 In the project directory, you can run:
 
 ### `npm start`

@@ -1,4 +1,4 @@
-const GET_ALL_CHAMPIONSHIPS = 'GET_ALL_CHAMPIONSHIPS'
+const GET_ALL_CHAMPIONSHIP_LIST = 'GET_ALL_CHAMPIONSHIP_LIST'
 
 const defaultState = {
     allChampionshipsList: []
@@ -6,10 +6,10 @@ const defaultState = {
 
 export const mainPageReducer = (state = defaultState, action) => {
     switch (action.type) {
-        case GET_ALL_CHAMPIONSHIPS:
+        case GET_ALL_CHAMPIONSHIP_LIST:
             return {
                 ...state,
-                allChampionshipsList: action.payload
+                allChampionshipsList: action.payload.data
             }
         default:
             return state
@@ -19,7 +19,7 @@ export const mainPageReducer = (state = defaultState, action) => {
 
 export const getAllChampionshipsAC = (allChampionshipsList) => (
     {
-        type: GET_ALL_CHAMPIONSHIPS,
+        type: GET_ALL_CHAMPIONSHIP_LIST,
         payload: allChampionshipsList
     }
 )
