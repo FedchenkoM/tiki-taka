@@ -1,22 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import './mainPage.scss';
-import { useDispatch, useSelector } from 'react-redux'
-import { getAllChampionshipList } from '../Actions/mainPage';
 import ChampionshipCard from '../ChampionshipCard/ChampionshipCard';
+import { ChampionshipsContext } from '../App/App'
+import Loader from '../Loader/Loader';
 
 const MainPage = () => {
-    const dispatch = useDispatch()
-    const championships = useSelector(state => state.mainPageReducer.allChampionshipsList)
+    const championships = useContext(ChampionshipsContext)
 
-    useEffect(() => {
-        dispatch(getAllChampionshipList())
-    }, [])
-    // console.log(championships.map(championship => championship.name))
+
+    if (!championships.length) return (<Loader />)
 
     return (
         <div className='main-page-container'>
             {championships.map((championship) =>
-                <ChampionshipCard championship={championship} />
+                <ChampionshipCard key={championship.id}
+                    championship={championship} />
             )}
         </div>
     );

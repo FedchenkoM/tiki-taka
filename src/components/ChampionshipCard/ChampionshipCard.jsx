@@ -1,8 +1,7 @@
 import React from 'react';
 import './championshipCard.scss';
 
-const ChampionshipCard = (props) => {
-    const championship = props.championship
+const ChampionshipCard = ({ championship }) => {
     return (
         <div className='card-container'>
             <img src={championship.logos.light}
